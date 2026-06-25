@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+    min-height:100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:#0f172a;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        #ff6b81,
+        #ff9ff3,
+        #54a0ff,
+        #5f27cd
+    );
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    width:95%;
+    max-width:700px;
+}
+
+.card{
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
+}
+
+.hidden{
+    display:none;
+}
+
+h1{
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    position:relative;
+    min-height:100px;
+}
+
+.btn{
+    border:none;
+    padding:14px 28px;
+    border-radius:15px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.sim{
+    background:white;
+}
+
+.nao{
+    background:#ff4757;
+    color:white;
+}
+
+.confirmar{
+    margin-top:25px;
+    background:#fff;
+}
+
+.reiniciar{
+    margin-top:20px;
+    background:white;
+}
+
+.step{
+    margin-top:25px;
+}
+
+.options{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-top:10px;
+}
+
+.options button{
+    border:none;
+    padding:12px 18px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.options button.selected{
+    transform:scale(1.08);
+    outline:3px solid white;
+}
+
+input[type="date"]{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+#mensagemNao{
+    margin-top:20px;
+    font-weight:bold;
+}
+
+.fun-message{
+    color:#f8f0ff;
+    font-size:1.05rem;
+    margin-top:10px;
+}
+
+.final{
+    margin-top:20px;
+    font-size:1.1rem;
+    font-weight:700;
+    color:#fffae6;
+}
+
+.confetti-piece{
+    position:fixed;
+    width:10px;
+    height:10px;
+    animation:fall 3s linear forwards;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-50px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
